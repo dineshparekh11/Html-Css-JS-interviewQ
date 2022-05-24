@@ -1,0 +1,88 @@
+40+ MOST COMMONLY Asked Questions [JS, CSS, HTML]
+
+Q1. What is clouser ?
+-->   is combination of function bundled together. inner function has access to the to an outer function's scope and its parameters even after the outer function has returned.
+
+Q2. What is difference between call, apply and bind?
+-->  -call and apply call a function while bind creates a new function. Arguments are individually passed in call while apply expects an array.
+For ex.
+const john = {
+	firstName:”John”,
+	lastName:”Doe”
+}
+
+Function greet(greeting, message)
+{
+	return `${greeting} ${this.firstName} ${lastName}`
+}  
+greet.call(john. ‘Hello’, ‘How are you?’)
+greet.call(john. [‘Hello’, ‘How are you?’])
+
+Q3. What is an event loop?
+-->  Responsible for executing js code, collecting and processing events and executing queued sub-tasks.
+
+Q4. What is currying function?
+-->  is the process of taking a function with multiple argument and turning into a sequence of function each with only single argument.
+
+For ex.
+
+const add = x => y => x+y;
+
+const add20ToNumber = add(20);
+add20ToNumber(100)
+add20ToNumber(200)
+add20ToNumber(300)
+
+const add20ToNumber = add(50);
+Add50ToNumber(100)
+Add50ToNumber(200)
+Add50ToNumber(300)
+
+Q5. What is prototype in Javascript?
+--> Prototype are the mechanism by which JavaScript object inherit features from another object 
+
+An object's prototype object may also have a  prototype object, which it 	inherits methods  and properties from, and so on. This is  often referred 	to as a prototype chain
+
+Q6. What is memoization?
+-->  is an optimization technique used primarily to speed up computer programs by storing the result of expensive function call and returning the cached result when the same inputs occur again
+
+For ex.
+Fibonnaci series
+
+Without memoization complexity: O(2^n)
+
+With memoization complexity: O(n)
+
+Q7. What is higher order function?
+--> is a function that accepts another function as an argument or return a function as a return value, or both combination of above
+For ex.
+
+ 
+
+
+Q8. What is event delegation?
+-->  is a useful pattern of adding an event listener to a single element (parent) instead of assigning events on multiple elements.
+
+For ex. 
+There are 3 steps to create event delegation 
+Step 1: Find a parent element to attach the event 
+Step 2: Attach the event  listener to the parent element 
+Step 3: Use event.target to select the target  element and do something with the element
+
+
+Q9. Name some ways to handling async opertaion in javascript?
+-->  callback, promise, and async / await
+
+Callback is a function which are  used to notify the calling instance 
+when asynchronous code block has been executed and the result is available.
+
+
+Promise is an object representing  the eventual completion or failure of an asynchronous operation. A pending promise can either be fulfilled with a value or rejected with a reason.
+
+Callbacks are attached to the  returned promises that makes handling of  asynchronous code easier and more readable. 
+
+
+Async // await - a new addition with ES2017 which is a syntactic sugar on top of promises  and make asynchronous code look synchronous code
+
+
+showAvatar()
